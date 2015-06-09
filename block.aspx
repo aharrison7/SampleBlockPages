@@ -17,9 +17,7 @@
         if (Request.QueryString["url"] != null)
         {
             // Since the decisions are made only on the domain, let's *just* show the domain.
-            // Hiding REGEX since the syntax returned no longer is parsed correctly by the regex and returns empty
-            //Match m = Regex.Match(Rot13.Transform(Request.QueryString["url"]), "[a-z]+://([^/]+)/", RegexOptions.IgnoreCase);
-            //DomainLabel.Text = m.Groups[1].ToString();
+
             DomainLabel.Text = Rot13.Transform(Request.QueryString["url"]);
         }
         else
